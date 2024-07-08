@@ -14,6 +14,14 @@ const mainReducer = (state = initialState, action) => {
           content: state.favouriteJobs.content.concat(action.payload),
         },
       };
+    case "DELETE_JOB":
+      return {
+        ...state,
+        favouriteJobs: {
+          ...state.favouriteJobs,
+          content: state.favouriteJobs.content.filter(favJob => favJob._id !== action.payload),
+        },
+      };
 
     default:
       return state;
