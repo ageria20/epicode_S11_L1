@@ -2,6 +2,9 @@ const initialState = {
   favouriteJobs: {
     content: [],
   },
+  isSelected: {
+    content: false,
+  },
 };
 
 const mainReducer = (state = initialState, action) => {
